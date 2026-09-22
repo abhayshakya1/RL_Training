@@ -1,6 +1,6 @@
 [project]
 name = "geo-distance"
-version = "0.1.0"
+version = "0.2.0"
 description = "Great-circle distance between two points on a sphere, from coordinates."
 tags = ["geometry", "math", "train", "eval"]
 requires-python = ">=3.11"
