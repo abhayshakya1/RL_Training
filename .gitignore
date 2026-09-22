@@ -1,0 +1,37 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+# Lab generated artifacts
+.env
+/AGENTS.md
+/CLAUDE.md
+/CLAUDE.local.md
+/.prime/
+/.agents/skills/
+/.claude/skills/
+/.cursor/skills/
+/.factory/skills/
+/.grok/skills/
+/.opencode/skills/
+/.pi/skills/
+/outputs/
+/prime-rl/
+/environments/AGENTS.md
+/environments/*/outputs/
+/environments/*/dist/
+/environments/*/*.egg-info/
+/environments/*/__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+
+
+# macOS
+.DS_Store

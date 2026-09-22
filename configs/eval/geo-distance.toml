@@ -1,0 +1,24 @@
+# Local eval for the geo-distance environment:
+#   uv run eval @ configs/eval/geo-distance.toml
+#
+# Override anything on the command line, e.g. -n 50 -r 4 -m <model>.
+
+model = "deepseek/deepseek-v4-flash"
+num_tasks = 20
+num_rollouts = 1
+
+[env.taskset]
+id = "geo-distance"
+
+[env.taskset.task]
+# Full credit within 1% relative error, nothing at 50% or worse, log-linear between.
+full_credit_err = 0.01
+zero_credit_err = 0.5
+
+[env.agent.runtime]
+# The taskset is pure arithmetic and its harness is a single model turn, so there is
+# nothing to containerise. `prime` (the default) provisions a billed sandbox per task.
+type = "subprocess"
+
+[sampling]
+max_tokens = 2048
